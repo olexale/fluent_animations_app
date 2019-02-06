@@ -32,7 +32,7 @@ class _GridPageState extends State<GridPage> {
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount:
                             orientation == Orientation.portrait ? 2 : 3,
-                        childAspectRatio: 1.5),
+                        childAspectRatio: 1.6),
                     itemBuilder: (BuildContext context, int index) {
                       return GestureDetector(
                         onTap: () =>

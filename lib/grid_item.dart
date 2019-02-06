@@ -2,6 +2,8 @@ import 'package:fluent_animations_app/animated_appearing.dart';
 import 'package:flutter/material.dart';
 import 'package:random_user/models.dart';
 
+const Color selectedCardColor = Color.fromRGBO(35, 38, 42, 1);
+
 class GridItem extends StatelessWidget {
   const GridItem({Key key, @required this.profile, this.isSelected})
       : super(key: key);
@@ -17,10 +19,10 @@ class GridItem extends StatelessWidget {
       padding:
           isSelected ? const EdgeInsets.all(0.0) : const EdgeInsets.all(6.0),
       child: Card(
-          color: isSelected ? Colors.grey[700] : Theme.of(context).cardColor,
+          color: isSelected ? selectedCardColor : Theme.of(context).cardColor,
           elevation: isSelected ? 15 : 4,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(12.0),
             child: Row(children: [
               CircleAvatar(
                   radius: isSelected ? 33.0 : 26.0,
@@ -56,9 +58,11 @@ class GridItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
+                        padding: const EdgeInsets.all(2.0),
                         icon: const Icon(Icons.phone, size: 20),
                         onPressed: isSelected ? () {} : null),
                     IconButton(
+                        padding: const EdgeInsets.all(2.0),
                         icon: const Icon(Icons.videocam, size: 20),
                         onPressed: isSelected ? () {} : null),
                   ],
